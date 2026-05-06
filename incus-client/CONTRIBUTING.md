@@ -136,6 +136,8 @@ cp README.md incus-client/README.md
 ### 6. Verify
 
 ```bash
+cargo test
+
 cd incus-client
 cargo build
 cargo clippy
