@@ -3,6 +3,7 @@
 [![Crates.io](https://img.shields.io/crates/v/incus-client.svg)](https://crates.io/crates/incus-client)
 [![Docs.rs](https://docs.rs/incus-client/badge.svg)](https://docs.rs/incus-client)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/joleuger/incus-client-rs)
 
 A Rust client for the [Incus](https://linuxcontainers.org/incus/) REST API, built with
 [reqwest](https://github.com/seanmonstar/reqwest).
@@ -12,7 +13,7 @@ The API bindings are generated from the official Incus OpenAPI specification usi
 code is checked in so that users do not need Java or any other tooling — just `cargo add`.
 
 📖 **Official Incus REST API reference:** https://linuxcontainers.org/incus/docs/main/rest-api/
-📖 **Generated API docs:** [README_API.md](https://github.com/joleuger/incus-client-rs/incus-client/README_API.md)
+📖 **Generated API docs:** [README_API.md](https://github.com/joleuger/incus-client-rs/blob/main/incus-client/README_API.md)
 
 > **Looking for a maintainer!**
 > This crate is regenerated periodically from the upstream spec.
@@ -164,7 +165,7 @@ New functionality is added exclusively via `api_extensions`.
 
 Not all Incus API endpoints are included — only those listed here have been generated
 and are maintained. If you need an endpoint that is missing, feel free to open an issue
-or submit a PR (see [CONTRIBUTING.md](CONTRIBUTING.md)).
+or submit a PR (see [CONTRIBUTING.md](https://github.com/joleuger/incus-client-rs/blob/main/incus-client/CONTRIBUTING.md)).
 
 | Endpoint | Methods | Exported from |
 |----------|---------|---------------|
@@ -182,7 +183,7 @@ or submit a PR (see [CONTRIBUTING.md](CONTRIBUTING.md)).
 ## Contributing
 
 Missing an endpoint? Open an issue or submit a PR — adding a new endpoint is straightforward
-and does not require deep knowledge of the codebase. See [CONTRIBUTING.md](https://github.com/joleuger/incus-client-rs/incus-client/CONTRIBUTING.md)
+and does not require deep knowledge of the codebase. See [CONTRIBUTING.md](https://github.com/joleuger/incus-client-rs/blob/main/incus-client/CONTRIBUTING.md)
 for the step-by-step process.
 
 ---
