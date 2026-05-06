@@ -22,27 +22,11 @@ code is checked in so that users do not need Java or any other tooling — just 
 
 ---
 
-## Features
-
-| Feature        | Description                                                             | Default |
-|----------------|-------------------------------------------------------------------------|---------|
-| `unix-socket`  | Connect to Incus via the local Unix domain socket instead of HTTPS/TCP | no      |
-
-By default the client communicates with Incus over HTTPS (TCP).
-Enable the `unix-socket` feature to talk to a local Incus daemon through the Unix socket
-(auto-detected, see below) without any TLS setup.
-
----
-
 ## Installation
 
 ```toml
 [dependencies]
-# HTTPS / remote access (default)
 incus-client = "0.1"
-
-# Local Unix socket access
-incus-client = { version = "0.1", features = ["unix-socket"] }
 ```
 
 ---
@@ -50,7 +34,7 @@ incus-client = { version = "0.1", features = ["unix-socket"] }
 ## Usage
 
 
-### Local access via Unix socket (feature = `"unix-socket"`)
+### Local access via Unix socket
 
 When running on the same machine as the Incus daemon, connect through the Unix socket.
 No TLS certificates required — authentication is handled by file-system permissions.
@@ -170,13 +154,13 @@ or submit a PR (see [CONTRIBUTING.md](https://github.com/joleuger/incus-client-r
 | Endpoint | Methods | Exported from |
 |----------|---------|---------------|
 | `/1.0` | `*` | 40dd4f1 (Pre 7.0) |
-| `/1.0?public` | `` | 40dd4f1 (Pre 7.0) |
-| `/1.0/operations` | `` | 40dd4f1 (Pre 7.0) |
-| `/1.0/operations/{id}/wait` | `` | 40dd4f1 (Pre 7.0) |
-| `/1.0/instances` | `` | 40dd4f1 (Pre 7.0) |
-| `/1.0/instances/{name}*` | `` | 40dd4f1 (Pre 7.0) |
+| `/1.0?public` | `*` | 40dd4f1 (Pre 7.0) |
+| `/1.0/operations` | `*` | 40dd4f1 (Pre 7.0) |
+| `/1.0/operations/{id}/wait` | `*` | 40dd4f1 (Pre 7.0) |
+| `/1.0/instances` | `*` | 40dd4f1 (Pre 7.0) |
+| `/1.0/instances/{name}*` | `*` | 40dd4f1 (Pre 7.0) |
 | `/1.0/images` | `GET` | 40dd4f1 (Pre 7.0) |
-| `/1.0/images/{fingerprint}` | `` | 40dd4f1 (Pre 7.0) |
+| `/1.0/images/{fingerprint}` | `*` | 40dd4f1 (Pre 7.0) |
 
 ---
 
